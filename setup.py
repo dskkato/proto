@@ -11,4 +11,8 @@ setup(name="proto",
         author_email="kato.daisuke429@gmail.com",
         license="MIT",
         packages=["proto"],
-        zip_safe=False)
+        zip_safe=False,
+        test_suite="nose.collector",
+        tests_require=["nose"],
+        scripts=["bin/hello"],
+        )
