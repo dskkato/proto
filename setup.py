@@ -13,6 +13,6 @@ setup(name="proto",
         packages=["proto"],
         zip_safe=False,
         test_suite="nose.collector",
-        tests_require=["nose"],
+        tests_require=["nose", "pycodestyle"],
         scripts=["bin/hello"],
         )
