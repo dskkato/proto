@@ -1,8 +1,17 @@
 language: python
 python:
-  - "3.6"
+  - '3.6'
+matrix:
+  fast_finish: true
+  include:
+  - name: unittest
+  - name: style-chdeck
 install:
   - python setup.py install
 script:
-  - python setup.py test
-  - pycodestyle proto
+  - if[[ $TRAVIS_JOB_NAME == 'unittest' ]]; then
+      python setup.py test
+    fi
+  - if[[ $TRAVIS_JOB_NAME == 'style-check' ]]; then
+      pycodestyle proto
+    fi
