@@ -2,6 +2,7 @@ language: python
 python:
   - "3.6"
 install:
-  - python3.6 setup.py install
+  - python setup.py install
 script:
+  - python -mpydocstyle proto
   - python setup.py test
