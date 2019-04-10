@@ -13,5 +13,5 @@ script:
       python setup.py test
     fi
   - if[[ $TRAVIS_JOB_NAME == 'style-check' ]]; then
-      pycodestyle proto
+      python -mpycodestyle proto
     fi
